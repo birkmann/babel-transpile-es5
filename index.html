@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transpiling to ES5</title>
+    <style>
+      body {
+        margin: 0;
+        font: 16px/1.618em sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 1040px;
+        margin: auto;
+        padding: 0 2rem;
+      }
+      h2 {
+        margin: 1rem 0;
+      }
+      li {
+        list-style: none;
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+        margin: 1rem 0;
+        padding: 1rem;
+      }
+      .page {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+      }
+      .user-card {
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+        margin-bottom: 4rem;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="container">
+        <div class="user-card">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z"
+            />
+          </svg>
+          <br />
+          <b>Name:</b>
+          <span class="user-name"></span>
+          <br />
+          <b>Phone:</b>
+          <span class="user-phone"></span>
+          <br />
+          <b>Username:</b>
+          <span class="user-username"></span>
+          <br />
+          <b>Website:</b>
+          <span class="user-website"></span>
+          <br />
+          <br />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+            />
+          </svg>
+          <br />
+          <b>Address</b>
+          <br />
+          Street: <span class="user-street"></span>
+          <br />
+          Suite: <span class="user-suite"></span>
+          <br />
+          City: <span class="user-city"></span>
+          <br />
+          ZIP: <span class="user-zip"></span>
+          <br />
+          <br />
+          <svg
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+          >
+            <path
+              d="M6 7v-7h13v10h5v14h-23v-17h5zm0 16v-4h-1v4h1zm8-4h-3v4h3v-4zm6 0h-1v4h1v-4zm2-7h-3v6h2v4h1v-10zm-5-10h-9v20h1v-5h7v5h1v-20zm-13 20v-4h2v-9h-3v13h1zm17-6h-1v-2h1v2zm-17-2h1v2h-1v-2zm8 1h-2v-2h2v2zm3 0h-2v-2h2v2zm-10-4v2h-1v-2h1zm7 1h-2v-2h2v2zm3 0h-2v-2h2v2zm-3-3h-2v-2h2v2zm3 0h-2v-2h2v2zm-3-3h-2v-2h2v2zm3 0h-2v-2h2v2z"
+            />
+          </svg>
+          <br />
+          <b>Company</b>
+          <br />
+          Name: <span class="user-company-name"></span>
+          <br />
+          Phrase: <span class="user-company-phrase"></span>
+          <br />
+          bs: <span class="user-company-bs"></span>
+          <br />
+        </div>
+        <h3>Comments:</h3>
+        <div class="comments"></div>
+      </div>
+    </div>
+
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
