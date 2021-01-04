@@ -2,7 +2,7 @@ const getPost = async function () {
   let userResp = await fetch('https://jsonplaceholder.typicode.com/users/1')
   let user = await userResp.json()
 
-  //console.log(user)
+  console.log(user)
 
   document.querySelector('.user-name').innerHTML = user.name
   document.querySelector('.user-street').innerHTML = user.address.street
@@ -15,7 +15,8 @@ const getPost = async function () {
   document.querySelector('.user-website').innerHTML = user.website
 
   document.querySelector('.user-company-name').innerHTML = user.company.name
-  document.querySelector('.user-company-phrase').innerHTML = user.company.phrase
+  document.querySelector('.user-company-phrase').innerHTML =
+    user.company.catchPhrase
   document.querySelector('.user-company-bs').innerHTML = user.company.bs
 
   let commentsResp = await fetch(
